@@ -147,4 +147,16 @@ ggplot(x$osm_lines) + geom_sf()
 # osm_polygon_download(query)
 #
 #
+# PROBLEM: NONE OF THE NZ CITIES HAVE BOUNDARY INFORMATION - It seems as though the best we get is 'region' (regional council?)
+#
+# You can see this when you go to OpenStreetMap and search for any NZ city
+#
+# SOLUTION: Use another data source than OSM to grab the polygon information?
+#           e.g. use meshblocknz and then append the information from the statsNZ boundary files,
+#                (suitably simplified)
+#
+# ALTERNATIVE: Can we use the street information from OSM to define the city by some sort of clustering?
+#              Something like distance between intersections? Problem here is curves are points, but we
+#              could fix that I guess by getting rid of curves first.
+#              Seems quite a problem to solve though...
 
